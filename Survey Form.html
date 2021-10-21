@@ -1,0 +1,67 @@
+<style>
+	body{
+		background-color: gray;
+	}
+	header{
+		text-align: center;
+	}
+	form{
+		font-size: 20px;
+		margin: 10px 20px;
+	}
+	label, input, textarea, select{
+		margin: 10px;
+	}
+	input[type="text"], input[type="email"],input[type="number"], textarea, select{
+		width: 95%;
+		padding: 10px;
+	}
+	button{
+		width: 97%;
+		padding: 10px;
+		background-color: gray;
+		font-size: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+		border: 1px solid black;
+	}
+	#main{
+		background-color: lightgray;
+		margin: 10px;
+	}
+</style>
+<main id="main">
+	<header>
+		<h1 id="title">A Survey Form</h1>
+		<p id="description">Please fill out the form for our survey, Thank you.</p>
+	</header>
+	<form id="survey-form">
+		<label for="name-label" id="name-label">Name*</label><br>
+		<input id="name" type="text" name="name-label" placeholder="Write full name" required><br>
+		<label for="email-label" id="email-label">Email*</label><br>
+		<input id="email" type="email" name="email-label" placeholder="Write a valid Email ID" required><br>
+		<label for="number-label" id="number-label">Age(optional)</label><br>
+		<input id="number" type="number" name="number-label" min="0" max="120" placeholder="[0,120]"><br>
+		<label for="occupation">Occupation</label><br>
+		<select id="dropdown" name="occupation">
+			<option value="student">Student</option>
+			<option value="freelancer">Freelancer</option>
+			<option value="part_time_job">Part time job</option>
+			<option value="full_time_job">Full time job</option>
+		</select><br>
+		<label for="gender">Gender</label><br>
+		<input type="radio" name="gender" value="male" checked>Male<br>
+		<input type="radio" name="gender" value="female">Female<br>
+		<input type="radio" name="gender" value="other">Other<br>
+		<label for="hobby">What do you like to do? (Check all that apply)</label><br>
+		<input type="checkbox" name="h1" value="reading">Reading<br>
+		<input type="checkbox" name="h2" value="writing">Writing<br>
+		<input type="checkbox" name="h3" value="gardening">Gardening<br>
+		<input type="checkbox" name="h4" value="photography">Photography<br>
+		<input type="checkbox" name="h5" value="travelling">Travelling<br>
+		<label for="comment">Comment</label><br>
+		<textarea id="comment" name="comment" rows="4" cols="50">
+		</textarea><br>
+		<button id="submit" type="submit" name="submit" value="Submit">Submit</button>
+	</form>
+</main>
